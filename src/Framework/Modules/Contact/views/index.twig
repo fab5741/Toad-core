@@ -1,0 +1,28 @@
+{% extends 'layout.twig' %}
+ {% block title %}
+     Contact Page
+ {% endblock %}
+{% block body %}
+
+    <div class="card">
+        <div class="card-header">
+            Contact Page
+        </div>
+        <div class="card-block container">
+            <form action="{{ path('contact.index') }}" method="post">
+                {{ csrf_input() | raw }}
+                <br>
+                {{ field('name', name, "Name : ", {containerClass: "col-lg-4"}) }}
+
+                {{ field('email', email, "Email : ", {containerClass: "col-lg-4"}) }}
+
+                {{ field('message', message, "Message : ", {Type : "textarea", containerClass: "col-lg-4", rows : 5, cols : 2}) }}
+
+                <button class="btn btn-primary float-right" type="submit">
+                    Send
+                </button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

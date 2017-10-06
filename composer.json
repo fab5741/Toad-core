@@ -1,0 +1,45 @@
+{
+    "name": "fab5741/toad-core",
+    "description": "Core of Toad Frawmework",
+    "keywords": [
+        "framework",
+        "toad",
+        "php",
+        "modular",
+        "modern"
+    ],
+    "type": "framework",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/fab5741/toad-core/issues",
+        "source": "https://github.com/fab5741/toad-core"
+    },
+    "authors": [
+        {
+            "name": "Fabrice Palermo (fab5741)",
+            "email": "contact@fabrice-palermo.fr"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/psr7": "^1.4",
+        "http-interop/response-sender": "^1.0",
+        "twig/twig": "^2.4",
+        "php-di/php-di": "^5.4",
+        "pagerfanta/pagerfanta": "^1.0",
+        "middlewares/whoops": "^0.4.0",
+        "zendframework/zend-expressive-fastroute": "^2.1",
+        "doctrine/cache": "^1.7"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.1",
+        "phpunit/phpunit": "^6.3",
+        "robmorgan/phinx": "^0.9.1",
+        "fzaninotto/faker": "^1.7"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
