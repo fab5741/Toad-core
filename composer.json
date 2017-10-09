@@ -5,8 +5,7 @@
         "framework",
         "toad",
         "php",
-        "modular",
-        "modern"
+        "modular"
     ],
     "type": "framework",
     "license": "MIT",
