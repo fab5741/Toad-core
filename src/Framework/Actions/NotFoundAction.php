@@ -18,8 +18,7 @@ class NotFoundAction
      */
     public function __construct(
         RendererInterface $renderer
-    )
-    {
+    ) {
         $this->renderer = $renderer;
     }
 

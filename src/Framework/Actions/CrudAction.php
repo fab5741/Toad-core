@@ -46,8 +46,6 @@ class CrudAction
     private $flash;
 
 
-    use RouterAwareAction;
-
     /**
      * PostCrudActions constructor.
      * @param RendererInterface $renderer
@@ -61,8 +59,7 @@ class CrudAction
         Router $router,
         Table $table,
         FlashService $flash
-    )
-    {
+    ) {
 
         $this->renderer = $renderer;
         $this->router = $router;

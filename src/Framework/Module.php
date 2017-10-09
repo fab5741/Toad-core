@@ -25,5 +25,4 @@ abstract class Module
      * Path to Seedings - see /sphinx.php for more infos
      */
     const SEEDS = null;
-
 }

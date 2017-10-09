@@ -4,7 +4,7 @@ namespace Framework\Translator;
 
 use Framework\Exceptions\TranslateNotFoundException;
 
-class ArrayTranslator implements TranslatorInterface
+class ArrayTranslator
 {
 
     /**

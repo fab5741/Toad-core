@@ -4,7 +4,7 @@ namespace App\Blog;
 
 use Framework\Upload;
 
-class PostUpload extends Upload
+class PostUpload
 {
     protected $path = "";
 }

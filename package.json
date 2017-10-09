@@ -1,0 +1,23 @@
+{
+    "name": "toad-core",
+    "version": "1.0.0",
+    "description": "Simple modulary framework",
+    "directories": {
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fab5741/Toad.git"
+    },
+    "keywords": [
+        "Framework",
+        "Modulary",
+        "PHP"
+    ],
+    "author": "fab5741",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/fab5741/Toad-core/issues"
+    },
+    "homepage": "https://github.com/fab5741/Toad-core#readme"
+}

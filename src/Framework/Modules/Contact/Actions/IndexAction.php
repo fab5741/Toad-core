@@ -43,8 +43,7 @@ class IndexAction
         RendererInterface $renderer,
         MailInterface $mail,
         FlashService $flash
-    )
-    {
+    ) {
         $this->container = $container;
         $this->renderer = $renderer;
         $this->mail = $mail;

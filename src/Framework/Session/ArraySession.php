@@ -2,7 +2,7 @@
 
 namespace Framework\Session;
 
-class ArraySession implements SessionInterface
+class ArraySession
 {
     private $session = [];
 
