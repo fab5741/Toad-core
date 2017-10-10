@@ -2,7 +2,7 @@
 
 namespace Tests\Framework\Middleware;
 
-use Framework\Exception\CsrfInvalidException;
+use Framework\Exceptions\CsrfInvalidException;
 use Framework\Middleware\CsrfMiddleware;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\ServerRequest;

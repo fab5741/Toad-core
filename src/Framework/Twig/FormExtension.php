@@ -46,7 +46,7 @@ class FormExtension extends \Twig_Extension
             $attributes['class'] .= ' form-control-danger';
         }
         if ($type == 'textarea') {
-            $input = $this->textarea($value, $attributes, (int)$options['rows'] ?? null, (int)$options['cols'] ?? null);
+            $input = $this->textarea($value, $attributes, $options);
         } elseif ($type === "file") {
             $input = $this->file($attributes);
         } elseif (array_key_exists('options', $options)) {
@@ -89,15 +89,22 @@ class FormExtension extends \Twig_Extension
     /**
      * @param null|string $value
      * @param array $attributes
-     * @param int $rows
-     * @param int|null $cols
+     * @param array $options
      * @return string
      */
-    private function textarea(string $value, array $attributes, int $rows = null, int $cols = null): string
+    private function textarea(string $value, array $attributes, array $options): string
     {
-        $rows = "rows=" . $rows ?? "rows={$rows}";
-        $cols = "cols=" . $cols ?? "rows={$cols}";
-        return "<textarea " . $this->getHtmlFromArray($attributes) . " " . $rows . " " . $cols . ">{$value}</textarea>";
+        $rows = "";
+        $cols = "";
+        $optionsString = "";
+        if (array_key_exists("rows", $options)) {
+            $optionsString .= " rows=" . $options["rows"] ?? "rows={$options["rows"]}";
+        }
+
+        if (array_key_exists("cols", $options)) {
+            $optionsString .= " cols=" . $options["cols"] ?? "cols={$options["cols"]}";
+        }
+        return "<textarea " . $this->getHtmlFromArray($attributes) . $optionsString .">{$value}</textarea>";
     }
 
     /**

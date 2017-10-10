@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\Exception;
+namespace Framework\Exceptions;
 
 class CsrfInvalidException extends \Exception
 {
