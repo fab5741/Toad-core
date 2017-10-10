@@ -52,8 +52,8 @@ class UploadTest extends TestCase
 
         $uploadedFile->expects($this->once())
             ->method('moveTo')
-            ->with($this->equalTo(__DIR__ . '/demo.jpg'));
+            ->with($this->equalTo(__DIR__ . '/demo_copy.jpg'));
 
-        $this->assertEquals('demo.jpg', $this->upload->upload($uploadedFile));
+        $this->assertEquals('demo_copy.jpg', $this->upload->upload($uploadedFile));
     }
 }

@@ -22,7 +22,7 @@ class FormExtensionTest extends TestCase
         $html = $this->formExtension->field([], 'name', 'demo', 'Titre');
         $this->assertSimilar("
             <div class=\"form-group\">
-                <label for=\"name\">Titre</label>
+                <label class=\"form-control-label\" for=\"name\">Titre</label>
                 <input type=\"text\" class=\"form-control\" name=\"name\" id=\"name\" value=\"demo\">
             </div>
         ", $html);
@@ -45,7 +45,7 @@ class FormExtensionTest extends TestCase
         $html = $this->formExtension->field([], 'name', 'demo', 'Titre', ['Type' => 'textarea']);
         $this->assertSimilar("
             <div class=\"form-group\">
-                <label for=\"name\">Titre</label>
+                <label class=\"form-control-label\" for=\"name\">Titre</label>
                 <textarea class=\"form-control\" name=\"name\" id=\"name\">demo</textarea>
             </div>
         ", $html);
@@ -57,7 +57,7 @@ class FormExtensionTest extends TestCase
         $html = $this->formExtension->field($context, 'name', 'demo', 'Titre', ['Type' => 'textarea']);
         $this->assertSimilar("
             <div class=\"form-group has-danger\">
-                <label for=\"name\">Titre</label>
+                <label class=\"form-control-label\" for=\"name\">Titre</label>
                 <textarea class=\"form-control form-control-danger\" name=\"name\" id=\"name\">demo</textarea>
                 <small class=\"form-text text-muted\">erreur</small>
             </div>
@@ -69,7 +69,7 @@ class FormExtensionTest extends TestCase
         $html = $this->formExtension->field([], 'name', 'demo', 'Titre', ['class' => "demo"]);
         $this->assertSimilar("
             <div class=\"form-group\">
-                <label for=\"name\">Titre</label>
+                <label class=\"form-control-label\" for=\"name\">Titre</label>
                 <input type=\"text\" class=\"form-control demo\" name=\"name\" id=\"name\" value=\"demo\">
             </div>
         ", $html);
@@ -79,7 +79,7 @@ class FormExtensionTest extends TestCase
     {
         $html = $this->formExtension->field([], 'name', 2, 'Titre', ['options' => [1 => "Demo", "2" => "DEMO2"]]);
         $this->assertSimilar(' <div class="form-group">
-                <label for="name">Titre</label>
+                <label class="form-control-label" for="name">Titre</label>
                 <select class="form-control" name="name" id="name">
                 <option value="1">Demo</option>
                 <option value="2" selected>DEMO2</option></select>

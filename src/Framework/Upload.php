@@ -27,8 +27,6 @@ class Upload
         if (!file_exists($dirname)) {
             mkdir($dirname, 777, true);
         }
-
-        var_dump($targetPath);
         $file->moveTo($targetPath);
         return pathinfo($targetPath)['basename'];
     }

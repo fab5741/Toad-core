@@ -8,7 +8,7 @@ interface SessionInterface
      * Get info in session
      *
      * @param string $key
-     * @param mixed $default
+     * @param  $default
      * @return mixed
      */
     public function get(string $key, $default = null);
@@ -24,6 +24,7 @@ interface SessionInterface
 
     /**
      * Delete key in session
+     * @param string $key
      */
     public function delete(string $key): void;
 }

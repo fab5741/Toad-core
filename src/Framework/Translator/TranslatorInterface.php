@@ -22,7 +22,7 @@ interface TranslatorInterface
      * @param string $default
      * @return null|String
      */
-    public function get(string $key, ? string $lang = "eng", string $default): ? String;
+    public function get(string $key, ? string $lang = "eng", ? string $default = ""): ? String;
 
     /**
      * Get a key to a value, for a specified lang

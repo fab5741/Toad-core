@@ -2,7 +2,7 @@
 
 namespace Framework\Middleware;
 
-use Framework\Exception\CsrfInvalidException;
+use Framework\Exceptions\CsrfInvalidException;
 use Interop\Http\ServerMiddleware\DelegateInterface;
 use Interop\Http\ServerMiddleware\MiddlewareInterface;
 use Psr\Http\Message\ResponseInterface;
