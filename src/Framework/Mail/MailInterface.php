@@ -25,7 +25,15 @@ interface MailInterface
      * @param null|string $password
      * @param null|string $SMTPSecure
      */
-    public function config(string $host = "localhost", int $port = 25, ? bool $isDebug = false, ? bool $isSMTP = true, ? bool $isSMTPAuth, ? string $username = "", ? string $password = "", ? string $SMTPSecure): void;
+    public function config(string $host = "localhost",
+                           int $port = 25,
+                           ? bool $isDebug = false,
+                           ? bool $isSMTP = true,
+                           ? bool $isSMTPAuth = true,
+                           ? string $username = "",
+                           ? string $password = "",
+                           ? string $SMTPSecure = "tls"
+    ): void;
 
     /**
      * Recipients

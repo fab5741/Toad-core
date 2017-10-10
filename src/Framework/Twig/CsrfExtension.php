@@ -29,14 +29,14 @@ class CsrfExtension extends \Twig_Extension
     public function getFunctions(): array
     {
         return [
-            new \Twig_SimpleFunction('csrf_input', [$this, 'csrf_input'], ['is_safe' => ['html']])
+            new \Twig_SimpleFunction('csrfInput', [$this, 'csrfInput'], ['is_safe' => ['html']])
         ];
     }
 
     /**
      * @return string
      */
-    public function csrf_input(): string
+    public function csrfInput(): string
     {
         return "<input type=\"hidden\" " .
             "name=\"{$this->csrfMiddleware->getFormKey()}\" " .
