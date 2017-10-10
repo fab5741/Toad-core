@@ -3,6 +3,8 @@
 <a href="https://packagist.org/packages/fab5741/toad-core"><img src="https://poser.pugx.org/fab5741/toad-core/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/fab5741/toad-core"><img src="https://poser.pugx.org/fab5741/toad-core/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/fab5741/toad-core"><img src="https://poser.pugx.org/fab5741/toad-core/license.svg" alt="License"></a>
+<a href="https://codeclimate.com/github/fab5741/Toad-core/maintainability"><img src="https://api.codeclimate.com/v1/badges/502754149305e3cd8604/maintainability" /></a>
+<a href="https://codeclimate.com/github/fab5741/Toad-core/test_coverage"><img src="https://api.codeclimate.com/v1/badges/502754149305e3cd8604/test_coverage" /></a>
 </p>
 
 ## About Toad
