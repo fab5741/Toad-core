@@ -2,7 +2,7 @@
 
 namespace Framework\Session;
 
-class FlashService
+class FlashService implements SessionInterface
 {
     /**
      * @var SessionInterface
@@ -23,14 +23,14 @@ class FlashService
         $this->session = $session;
     }
 
-    public function success(string $message)
+    public function success(string $message, $default = null)
     {
         $flash = $this->session->get($this->sessionKey, []);
         $flash['success'] = $message;
         $this->session->set($this->sessionKey, $flash);
     }
 
-    public function error(string $message)
+    public function error(string $message, $default = null)
     {
         $flash = $this->session->get($this->sessionKey, []);
         $flash['error'] = $message;
@@ -39,9 +39,10 @@ class FlashService
 
     /**
      * @param string $type
+     * @param null $default
      * @return null|string
      */
-    public function get(string $type): ?string
+    public function get(string $type, $default = null): ?string
     {
         if (is_null($this->messages)) {
             $this->messages = $this->session->get($this->sessionKey, []);
@@ -51,5 +52,26 @@ class FlashService
             return $this->messages[$type];
         }
         return null;
+    }
+
+    /**
+     * Set info in session
+     *
+     * @param string $key
+     * @param $value
+     * @return mixed
+     */
+    public function set(string $key, $value): void
+    {
+        // TODO: Implement set() method.
+    }
+
+    /**
+     * Delete key in session
+     * @param string $key
+     */
+    public function delete(string $key): void
+    {
+        // TODO: Implement delete() method.
     }
 }
